@@ -1,0 +1,37 @@
+public class StringStringBufferExample {
+    public static void main(String[] args) {
+        // Example using String class methods
+        String str = "Hello, world!";
+        
+        // length() method of String class
+        int length = str.length();
+        System.out.println("Length of the string: " + length);
+        
+        // charAt() method of String class
+        char firstChar = str.charAt(0);
+        System.out.println("First character of the string: " + firstChar);
+        
+        // substring() method of String class
+        String substring = str.substring(7);
+        System.out.println("Substring from index 7: " + substring);
+        
+        // Example using StringBuffer class methods
+        StringBuffer stringBuffer = new StringBuffer("Java programming");
+        
+        // append() method of StringBuffer class
+        stringBuffer.append(" is fun!");
+        System.out.println("After appending: " + stringBuffer);
+        
+        // insert() method of StringBuffer class
+        stringBuffer.insert(5, "rocks ");
+        System.out.println("After inserting at index 5: " + stringBuffer);
+        
+        // delete() method of StringBuffer class
+        stringBuffer.delete(0, 5);
+        System.out.println("After deleting from index 0 to 4: " + stringBuffer);
+        
+        // reverse() method of StringBuffer class
+        stringBuffer.reverse();
+        System.out.println("After reversing: " + stringBuffer);
+    }
+}
