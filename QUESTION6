@@ -1,0 +1,65 @@
+import java.util.Scanner;
+public class MatrixMultiplication {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input the size of the square matrices
+        System.out.print("Enter the size of the square matrices: ");
+        int n = scanner.nextInt();
+
+        // Input the elements of the first matrix
+        System.out.println("Enter the elements of the first matrix:");
+        int[][] matrix1 = inputMatrix(n, scanner);
+
+        // Input the elements of the second matrix
+        System.out.println("Enter the elements of the second matrix:");
+        int[][] matrix2 = inputMatrix(n, scanner);
+
+        // Perform matrix multiplication
+        int[][] result = multiplyMatrices(matrix1, matrix2);
+
+        // Display the result
+        System.out.println("Result of matrix multiplication:");
+        printMatrix(result);
+
+        scanner.close();
+    }
+
+    // Method to input a matrix from the user
+    public static int[][] inputMatrix(int n, Scanner scanner) {
+        int[][] matrix = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+        return matrix;
+    }
+
+    // Method to multiply two matrices
+    public static int[][] multiplyMatrices(int[][] matrix1, int[][] matrix2) {
+        int n = matrix1.length;
+        int[][] result = new int[n][n];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                for (int k = 0; k < n; k++) {
+                    result[i][j] += matrix1[i][k] * matrix2[k][j];
+                }
+            }
+        }
+
+        return result;
+    }
+
+    // Method to print a matrix
+    public static void printMatrix(int[][] matrix) {
+        int n = matrix.length;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
