@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class ArraySum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Asking user to enter the size of the array
+        System.out.print("Enter the size of the array: ");
+        int size = scanner.nextInt();
+
+        // Creating an array of size 'size'
+        int[] arr = new int[size];
+
+        // Asking user to enter the elements of the array
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < size; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        // Calculating the sum of array elements
+        int sum = 0;
+        for (int i = 0; i < size; i++) {
+            sum += arr[i];
+        }
+
+        // Displaying the sum of array elements
+        System.out.println("Sum of the elements of the array: " + sum);
+
+        scanner.close(); // Closing the scanner
+    }
+}
