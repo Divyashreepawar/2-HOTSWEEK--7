@@ -1,0 +1,35 @@
+import java.util.Arrays;
+
+public class CharArrayDescendingOrder {
+
+    public static void main(String[] args) {
+        // Creating a character array
+        char[] charArray = {'a', 'b', 'c', 'd', 'e'};
+
+        // Displaying the original array
+        System.out.println("Original character array: " + Arrays.toString(charArray));
+
+        // Sorting the array in descending order
+        Arrays.sort(charArray);
+        reverseArray(charArray);
+
+        // Displaying the array in descending order
+        System.out.println("Character array in descending order: " + Arrays.toString(charArray));
+    }
+
+    // Function to reverse the array
+    public static void reverseArray(char[] array) {
+        int start = 0;
+        int end = array.length - 1;
+
+        while (start < end) {
+            // Swapping elements at start and end indices
+            char temp = array[start];
+            array[start] = array[end];
+            array[end] = temp;
+            // Moving to the next pair of elements
+            start++;
+            end--;
+        }
+    }
+}
