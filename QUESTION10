@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class NameSearchExample {
+
+    public static void main(String[] args) {
+        // Creating a list to store names
+        List<String> namesList = new ArrayList<>();
+
+        // Adding names to the list
+        namesList.add("Alice");
+        namesList.add("Bob");
+        namesList.add("Charlie");
+        namesList.add("David");
+        namesList.add("Emily");
+        // Add more names as needed
+
+        // Printing the list
+        System.out.println("List of names: " + namesList);
+
+        // Searching for a name
+        String searchName = "Charlie";
+        if (namesList.contains(searchName)) {
+            System.out.println(searchName + " found in the list.");
+        } else {
+            System.out.println(searchName + " not found in the list.");
+        }
+    }
+}
